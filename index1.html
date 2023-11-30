@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <title>Interactive Resume</title>
+</head>
+<body>
+    <header>
+        <div class="header-content"><div class="details">
+            <form method="get" action="index2.html">
+
+                <fieldset style="height:37%;width: 150%;">
+                <legend>&nbsp;Personal Details&nbsp;</legend><br>
+                <table>
+                <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label>First Name</label></td><td><input type="text" id="fname" name="firstname"></td></tr>
+                <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label>Surname</label></td><td><input type="text" id="lname" name="lastname"></td></tr>
+                <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label>Mobile Number</label></td><td><input type="number"id="mobile" name="mobile"></td></tr>
+                <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label>Email</label></td><td><input type="email" id="email" name="email"></td></tr>
+                
+                <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label>Gender</label></td><td>
+                <input type="radio" id="male" name="gender" value="M">Male 
+                <input type="radio"id="female" name="gender" value="F">Female 
+                <input type="radio"id="others" name="gender" value="O">Others</td></tr>
+                <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label>City</label></td><td><input type="text" id="city"name="city"></td></tr>
+                <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label>Pincode</label></td><td><input type="number" id="pin"name="pincode"></td></tr>
+                <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label>Country</label></td><td><input type="text" id="country"name="country"></td></tr>
+                <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label>Upload Picture</label></td><td><input type="file"id="pic" name="pic"></td></tr>
+                </table></fieldset><br>
+                <fieldset style="height: 57% ;width: 150%;"> <legend>&nbsp;Professional Details&nbsp;</legend><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<textarea name="#" id="prodetails" cols="50" rows="6"></textarea><br><br>
+                    <legend>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Education Details</legend>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<textarea nameid="edudetails="#" " cols="50" rows="6"></textarea><br><br>
+                   <legend>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Skills</legend>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<textarea name="#" id="skils" cols="50" rows="6"></textarea><br><br>
+                </fieldset><br>
+                <center>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="reset">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="Submit"></center><br>
+            </form>
+            <div class="input_box">
+                <a href="index2.html?fname=" + encodeURIComponent(document.getElementById("user").value)>
+                    <input type="submit" class="input-submit" value="Login">
+                </a>
+            </div>
+        </div></div>
+    </header>
+
+</body>
+</html>

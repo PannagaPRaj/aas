@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <title>Interactive Resume</title>
+    <script type="text/javascript">
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+        function displayInfo() {
+            var fn = getParameterByName("firstname");
+            var ln = getParameterByName("lastname");
+            var mob = getParameterByName("mobile");
+            var email = getParameterByName("email");
+            var gender = getParameterByName("gender");
+            var city = getParameterByName("city");
+            var pincode = getParameterByName("pincode");
+            var country = getParameterByName("country");
+            document.getElementById("fname_output").innerHTML = "First Name: " + fn;
+            document.getElementById("lname_output").innerHTML = "Last Name: " + ln;
+            document.getElementById("mobile_output").innerHTML = "Mobile: " + mob;
+            document.getElementById("email_output").innerHTML = "Email: " + email;
+            document.getElementById("gender_output").innerHTML = "Gender: " + gender;
+            document.getElementById("city_output").innerHTML = "City: " + city;
+            document.getElementById("pincode_output").innerHTML = "Pincode: " + pincode;
+            document.getElementById("country_output").innerHTML = "Country: " + country;
+        }
+        window.onload = displayInfo;
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="left_side">
+            <div class="profiletext">
+                <div class="imgbx">
+                    <img src="background.jpeg"> 
+                </div>
+            
+            <h2>aas <br><span>web developer</span></h2>
+                </div>
+                <div class="contactinfo">
+                </div>
+        
+                <div class="right_side">
+                    <div class="displayinfo">
+                        <h3 class="title">Entered Information</h3>
+                        <div id="fname_output"></div>
+                        <div id="lname_output"></div>
+                        <div id="mobile_output"></div>
+                        <div id="email_output"></div>
+                        <div id="gender_output"></div>
+                        <div id="city_output"></div>
+                        <div id="pincode_output"></div>
+                        <div id="country_output"></div>
+                    </div>
+                </div>
+            </div>
+</body>
+</html>
